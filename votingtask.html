@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Task</title>
+</head>
+<style>
+    input {
+        width: 20%;
+        height: 30px;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    button {
+        margin-top: 1rem;
+        width: 8%;
+        height: 40px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: rgb(0, 0, 255);
+        color: white;
+        border-radius: 8px;
+    }
+
+    .container {
+        width: 50%;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url('myjs/Blog-Voter-ID-Documents_Cover-banner_Final.webp');
+        background-size: cover;
+    }
+
+    .message {
+        color: green;
+    }
+
+    .messageerr {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="container2">
+        <center><input type="date" name="userd" id="userd" required><br>
+            <button type="submit" onclick="ondate()">submit</button>
+    </div>
+    <div class="container">
+        <center>
+            <h1 class="message" id="eligible"></h1>
+        </center>
+        <center>
+            <h1 class="messageerr" id="noteligible"></h1>
+        </center>
+    </div>
+    <script>
+        function ondate() {
+            var dob = document.getElementById("userd").value;
+            var year = Number(dob.substr(0, 4));
+            var month = Number(dob.substr(4, 2)) - 1;
+            var day = Number(dob.substr(6, 2));
+            var today = new Date();
+            var age = today.getFullYear() - year;
+            
+            
+            if (dob .length < 3) {
+                alert("Select your Birth date");
+            }
+            else {
+                if (age >= 18) {
+                    var mess = "Your are eligible  for voting ";
+                    document.getElementById("eligible").innerHTML = mess;
+                }
+                else {
+                    var err = "Your are not eligible  for voting ";
+                    document.getElementById("noteligible").innerHTML = err;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

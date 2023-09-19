@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+    body{
+        background-color: beige;
+    }
+
+    .text-center {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .mx-auto {
+        align-items: center;
+        display: flex;
+    }
+
+    .m-w-20 {
+        flex-direction: column;
+    }
+
+    .button {
+        padding: 20px;
+        margin: 0 3px;
+        border-radius: 8px;
+        font-family: 'Roboto', sans-serif;
+        width: 76px;
+        background-color: rgb(40 40 40);
+        color: white;
+        font-size: 14px;
+    }
+
+    .row {
+        margin: 24px 27px;
+    }
+
+    .row input {
+        margin: 0;
+        padding: 10px 38px;
+        border: 2px;
+        border-radius: 9px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 21px;
+        height: 60px;
+        text-align: right;
+    }
+
+    .colcont{
+        background-color: rgba(0, 0, 0, 0.932);
+        border-radius: 20px;
+    }
+</style>
+
+<body>
+
+    <div class="container bg-red mx-auto m-w-20">
+        <div class="colcont">
+            <div class="row">
+                <input class="input" id="disp" type="text" placeholder="00">
+            </div>
+            <hr>
+            <div class="row">
+                <button class="button" onclick="digitseven()">7</button>
+                <button class="button" onclick="digiteight()">8</button>
+                <button class="button" onclick="digitnine()">9</button>
+                <button class="button" onclick="add()" style="background-color: #00a79d;">+</button>
+            </div>
+            <div class="row">
+                <button class="button" onclick="digitfour()">4</button>
+                <button class="button" onclick="digitfive()">5</button>
+                <button class="button" onclick="digitsix()">6</button>
+                <button class="button" onclick="sub()" style="background-color: #00a79d;">-</button>
+            </div>
+            <div class="row">
+                <button class="button" onclick="digitone()">1</button>
+                <button class="button" onclick="digittwo()">2</button>
+                <button class="button" onclick="digitthree()">3</button>
+                <button class="button" onclick="mul()" style="background-color: #00a79d;">*</button>
+            </div>
+            <div class="row">
+                <button class="button" onclick="digitzero()">0</button>
+                <button class="button" onclick="digitdzero()">00</button>
+                <button class="button" onclick="digitone()">.</button>
+                <button class="button" onclick="div()" style="background-color: #00a79d;">/</button>
+            </div>
+            <div class="row">
+                <button class="button" onclick="ac()" style="background-color: rgb(255, 61, 61);">ac</button>
+                <button class="button" onclick="modul()" style="background-color: rgb(255, 61, 61);">%</button>
+                <button class="button" onclick="dot()" style="background-color: rgb(255, 61, 61);">.</button>
+                <button class="button" onclick="result()" style="background-color: #00a79d;">=</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    
+    function digitone() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '1';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digittwo() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '2';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digitthree() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '3';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digitfour() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '4';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digitfive() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '5';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digitsix() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '6';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digitseven() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '7';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digiteight() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '8';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digitnine() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '9';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digitzero() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '0';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function digitdzero() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '00';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function add() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '+';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function sub() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '-';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function mul() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '*';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+    function div() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '/';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+
+    function modul() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '%';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+
+    function dot() {
+        var oldral = document.getElementById('disp').value;
+        var digit = '.';
+        var newral = oldral + digit;
+        document.getElementById('disp').value = newral;
+    }
+
+    function ac() {
+        var digit = ' ';
+        document.getElementById('disp').value = digit;
+    }
+
+    function result() {
+        var oldral = document.getElementById('disp').value;
+        var newral = eval(oldral);
+        document.getElementById('disp').value = newral;
+    }
+
+</script>
